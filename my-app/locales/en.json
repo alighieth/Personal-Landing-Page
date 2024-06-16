@@ -1,0 +1,14 @@
+{
+  "home": {
+    "Hello": "Hello",
+    "intro": "I am Ali Ghieth",
+    "Contact": "Contact",
+    "Home": "Home",
+    "Products": "Products",
+    "About": "About Us"
+  },
+  "about": {},
+  "products": {},
+  "contact": {},
+  "faq": {}
+}
