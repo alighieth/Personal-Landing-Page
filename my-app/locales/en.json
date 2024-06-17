@@ -16,6 +16,7 @@
     "touch": "Touch"
   },
   "footer": {
-    "contact": "Contact"
+    "contact": "Contact",
+    "created": "Created by"
   }
 }
