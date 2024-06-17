@@ -39,7 +39,7 @@ const ContactForm = () => {
     <section
       ref={containerRef}
       id="contact"
-      className="outline-dotted relative w-full h-[100vh] overflow-visible text-white flex flex-col justify-center"
+      className="relative w-full h-[100vh] overflow-visible text-white flex flex-col justify-center"
     >
       <h2
         // style={{ transform: `translateX(${scrollY * 0.75}px)` }}

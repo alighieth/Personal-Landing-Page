@@ -44,7 +44,7 @@ const Header = async (params: { locale: string }) => {
         {headerOptions.map((option) => (
           <Link
             key={option.key}
-            className="hover:bg-mainBlue p-2 rounded"
+            className="hover:bg-mainBlue p-2 rounded transition-all delay-75"
             href={option.href}
           >
             {option.label}

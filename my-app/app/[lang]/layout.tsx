@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import { I18nProviderClient } from "@/locales/client";
 import { ReactElement } from "react";
 import Footer from "@/components/Footer";
+import CursorFollower from "@/components/CursorFollower";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
         className={`scroll-smooth bg-contain bg-black flex flex-col justify-start items-center`}
       >
         <I18nProviderClient locale={lang}>
+          <CursorFollower />
           <Header locale={lang} />
           {children}
           <Footer />

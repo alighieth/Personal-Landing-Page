@@ -1,0 +1,27 @@
+"use client";
+import React, { useEffect, useState } from "react";
+
+const CursorFollower = () => {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const onMouseMove = (e: MouseEvent) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    document.addEventListener("mousemove", onMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", onMouseMove);
+    };
+  }, []);
+
+  return (
+    <div
+      className="z-50 absolute w-5 h-5 bg-mainBlue rounded-full pointer-events-none"
+      style={{ left: `${position.x}px`, top: `${position.y}px` }}
+    />
+  );
+};
+
+export default CursorFollower;
