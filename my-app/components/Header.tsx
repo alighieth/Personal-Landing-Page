@@ -38,7 +38,7 @@ const Header = async (params: { locale: string }) => {
   ];
 
   return (
-    <header className="w-full max-w-maxScreen flex flex-row items-center justify-between p-5 h-[20vh] box-border">
+    <header className="w-full max-w-maxScreen flex flex-row items-center justify-between h-[20vh] box-border">
       <h3>alighieth.</h3>
       <ol className="flex flex-row gap-7">
         {headerOptions.map((option) => (

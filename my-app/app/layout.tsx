@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-contain bg-gradient-to-r from-slate-800 to-slate-200 flex flex-col justify-start items-center`}
+        className={`scroll-smooth bg-contain bg-gradient-to-r from-slate-800 to-slate-200 flex flex-col justify-start items-center`}
       >
         <I18nProviderClient locale={lang ?? "en"}>
           <Header locale={lang} />

@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <main className="relative w-full">
       <IntroBody />
+      <section id="contact" className="w-full h-[20vh]"></section>
     </main>
   );
 }

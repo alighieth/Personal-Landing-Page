@@ -7,5 +7,3 @@ export const { useI18n, useScopedI18n, I18nProviderClient } = createI18nClient({
   de: () => import("./de.json"),
   ar: () => import("./ar.json"),
 });
-
-// locales/server.ts

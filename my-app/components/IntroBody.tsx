@@ -1,11 +1,10 @@
-import { getScopedI18n } from "@/locales/server";
 import Image from "next/image";
 import React from "react";
 import IntroBodyText from "./IntroBodyText";
 
 const IntroBody = async () => {
   return (
-    <div className="relative w-[100vw] h-[80vh] flex flex-col justify-start items-center">
+    <div className="outline-dotted relative w-[100vw] h-[80vh] flex flex-col justify-start items-center overflow-hidden">
       <IntroBodyText />
       <Image
         width={400}
