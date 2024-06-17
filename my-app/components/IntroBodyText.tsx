@@ -27,7 +27,7 @@ const IntroBodyText = () => {
       </h1>
       <h3
         style={{ transform: `translateY(${-scrollY * 0.75}px)` }}
-        className="font-thin text-6xl transition-transform delay-75"
+        className="font-thin text-6xl"
       >
         {t("intro")}
       </h3>

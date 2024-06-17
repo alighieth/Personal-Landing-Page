@@ -7,8 +7,15 @@
     "Products": "Products",
     "About": "About Us"
   },
-  "about": {},
+  "about": {
+    "intro": "We are a bunch of creative experts who are dedicated to achieving a higher aim"
+  },
   "products": {},
-  "contact": {},
-  "faq": {}
+  "contact": {
+    "getIn": "Get In",
+    "touch": "Touch"
+  },
+  "footer": {
+    "contact": "Contact"
+  }
 }

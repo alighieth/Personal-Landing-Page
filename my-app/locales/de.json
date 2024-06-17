@@ -7,8 +7,15 @@
     "Products": "Produkte",
     "About": "Uber Uns"
   },
-  "about": {},
+  "about": {
+    "intro": "Wir sind eine Gruppe kreativer Experten, die sich dem Erreichen eines höheren Ziels verschrieben haben"
+  },
   "products": {},
-  "contact": {},
-  "faq": {}
+  "contact": {
+    "getIn": "In Kontakt",
+    "touch": "kommen"
+  },
+  "footer": {
+    "contact": "Kontakt"
+  }
 }

@@ -11,7 +11,7 @@ const config: Config = {
       maxWidth: {
         maxScreen: "1220px",
       },
-      backgroundColor: {
+      colors: {
         mainBlue: "#445D96",
       },
     },
