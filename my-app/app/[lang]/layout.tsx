@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import CursorFollower from "@/components/CursorFollower";
 import { getScopedI18n } from "@/locales/server";
 import ScrollToTop from "@/components/ScrollToTop";
+import ScrollWatcher from "@/components/ScrollWatcher";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,12 +34,13 @@ export default async function RootLayout({
         className={`scroll-smooth bg-contain bg-black flex flex-col justify-start items-center`}
       >
         <I18nProviderClient locale={lang}>
+          <ScrollWatcher />
           <ScrollToTop />
           <CursorFollower />
           <Header locale={lang} />
           {children}
           <Footer />
-          <div className="w-full text-center p-5 flex flex-row justify-between items-center">
+          <div className="w-full text-center p-5 h-8 flex flex-row justify-between items-center">
             <span>{t("created")} alighieth</span>
             <span>&copy;2024</span>
           </div>

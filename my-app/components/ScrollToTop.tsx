@@ -11,7 +11,7 @@ const ScrollToTop = () => {
           behavior: "smooth",
         })
       }
-      className="z-30 p-5 bg-mainBlue fixed bottom-5 right-5 w-[4rem] h-[4rem] rounded-full border-mainBlue hover:opacity-50 transition-opacity delay-100"
+      className="z-30 p-5 bg-mainBlue fixed bottom-10 right-5 w-[4rem] h-[4rem] rounded-full border-mainBlue hover:opacity-50 transition-opacity delay-100"
     >
       <ArrowUpIcon />
     </button>
