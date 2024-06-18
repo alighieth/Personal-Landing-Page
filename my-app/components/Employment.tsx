@@ -13,7 +13,7 @@ const Employment = (props: EmploymentWrapperProps) => {
   console.log(employmentInfo.startDate);
   return (
     <div
-      className={`relative w-full h-[20vh] overflow-hidden p-5 ${borderStyle}`}
+      className={`relative w-full h-[10vh] overflow-hidden p-5 ${borderStyle}`}
     >
       <div className="absolute bottom-0 left-0 w-[5rem] h-[5rem] rounded-full flex justify-center items-center">
         <span className="text-black text-4xl font-bold">{index}</span>

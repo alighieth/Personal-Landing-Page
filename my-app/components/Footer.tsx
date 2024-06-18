@@ -31,6 +31,17 @@ const ContactOptionList: ContactOptionsProps[] = [
     url: "https://leetcode.com/alighieth/",
   },
   {
+    name: "Medium",
+    icon: "/facebook.png",
+    url: "https://medium.com/@alighieth",
+  },
+  {
+    name: "Upwork",
+    icon: "/facebook.png",
+    url:
+      "https://www.upwork.com/freelancers/~0165186670554350de?mp_source=share",
+  },
+  {
     name: "(+20)1211399151",
     icon: "/facebook.png",
     url: "tel:(+20)1211399151",

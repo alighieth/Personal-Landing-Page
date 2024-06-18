@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useScopedI18n } from "@/locales/client";
 
 const ContactForm = () => {
   const t = useScopedI18n("contact");
   const containerRef = useRef(null);
+
+  useEffect(() => {}, []);
 
   return (
     <section

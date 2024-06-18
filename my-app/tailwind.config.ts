@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        myPhoto: "url('/myPhoto.jpg')",
+      },
       maxWidth: {
         maxScreen: "1220px",
       },
