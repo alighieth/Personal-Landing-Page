@@ -95,3 +95,9 @@ body {
   border-radius: 0.5rem;
   text-transform: uppercase;
 }
+
+.footerScroller {
+  height: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+}

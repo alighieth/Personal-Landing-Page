@@ -68,17 +68,19 @@ const Footer = async () => {
         className="col-span-1 p-4 text-white flex flex-col gap-5 justify-start items-center"
       >
         <h3 className="text-6xl">alighieth.</h3>
-        <p className="uppercase">
-          I work to give customers{" "}
-          <p className="flex flex-col overflow-hidden">
-            <span>Exceptional</span>
-            <span>Unique</span>
-            <span>Endearing</span>
-            <span>Long Lasting</span>
-            <span>Memorable</span>
-          </p>
-          Experiences
-        </p>
+        <div className="uppercase w-1/2 flex flex-col justify-start items-start">
+          <h6> I work to give customers</h6>
+          <div className="self-center overflow-hidden h-7 w-32">
+            <ul className="footerScrolle m-0 p-0">
+              <li>Exceptional</li>
+              <li>Unique</li>
+              <li>Endearing</li>
+              <li>Long Lasting</li>
+              <li>Memorable</li>
+            </ul>
+          </div>
+          <h6>Experiences</h6>
+        </div>
       </div>
       <div
         id="footeContactInfo"
@@ -87,7 +89,11 @@ const Footer = async () => {
         <h3 className="text-6xl">{t("contact")}</h3>
         <div className="flex flex-row justify-start items-center gap-5 text-3xl">
           {ContactOptionList.map((option) => (
-            <a href={option.url} className="hover:text-mainBlue">
+            <a
+              href={option.url}
+              key={option.name}
+              className="hover:text-mainBlue"
+            >
               {option.name}
             </a>
           ))}
