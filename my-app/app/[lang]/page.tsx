@@ -1,6 +1,7 @@
 import AboutSection from "@/components/AboutSection";
 import ContactForm from "@/components/ContactForm";
 import IntroBody from "@/components/IntroBody";
+import Values from "@/components/Values";
 import Skills from "@/components/Skills";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <IntroBody />
       <AboutSection />
       <Skills />
+      <Values />
       <ContactForm />
     </main>
   );

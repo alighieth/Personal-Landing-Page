@@ -15,7 +15,7 @@ export interface EmploymentCompanyProps {
 const EmploymentList: EmploymentCompanyProps[] = [
   {
     companyName: "Koncile SAS",
-    companyLocation: "Paris, Ile-de-France, France",
+    companyLocation: "Paris, Ile-de-France, France, Remote",
     companyField: "Financial",
     position: "Full Stack Developer",
     startDate: new Date("01/05/2024").toDateString(),
@@ -23,22 +23,22 @@ const EmploymentList: EmploymentCompanyProps[] = [
     website: "https://www.koncile.ai/",
   },
   {
-    companyName: "Tekunda",
-    companyLocation: "United Arab Emirates",
-    companyField: "SaaS, DevOps",
-    position: "Full Stack Engineer 2 and Founding Team Member2",
-    startDate: new Date("1 July 2022").toDateString(),
-    endDate: new Date("01/05/2024").toDateString(),
-    website: "https://tekunda.com/",
-  },
-  {
     companyName: "Syntilio",
-    companyLocation: "Amsterdam, Netherlands",
+    companyLocation: "Amsterdam, Netherlands, Remote",
     companyField: "Healthcare",
     position: "Software/Salesforce Engineer",
     startDate: new Date("1 July 2022").toDateString(),
     endDate: new Date("01/05/2024").toDateString(),
     website: "https://syntilio.com/",
+  },
+  {
+    companyName: "Tekunda",
+    companyLocation: "Cairo, Egypt, Remote",
+    companyField: "SaaS, DevOps",
+    position: "Full Stack Engineer 2 and Founding Team Member2",
+    startDate: new Date("1 July 2022").toDateString(),
+    endDate: new Date("01/05/2024").toDateString(),
+    website: "https://tekunda.com/",
   },
   {
     companyName: "Bynar Systems",

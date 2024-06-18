@@ -8,7 +8,7 @@ export interface EmploymentWrapperProps {
   employmentInfo: EmploymentCompanyProps;
 }
 
-const EmploymentWrapper = (props: EmploymentWrapperProps) => {
+const Employment = (props: EmploymentWrapperProps) => {
   const { index, borderStyle, employmentInfo } = props;
   console.log(employmentInfo.startDate);
   return (
@@ -44,4 +44,4 @@ const EmploymentWrapper = (props: EmploymentWrapperProps) => {
   );
 };
 
-export default EmploymentWrapper;
+export default Employment;
