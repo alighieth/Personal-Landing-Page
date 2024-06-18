@@ -71,7 +71,7 @@ const Footer = async () => {
         <div className="uppercase w-1/2 flex flex-col justify-start items-start">
           <h6> I work to give customers</h6>
           <div className="self-center overflow-hidden h-7 w-32">
-            <ul className="footerScrolle m-0 p-0">
+            <ul className="footerScroller m-0 p-0">
               <li>Exceptional</li>
               <li>Unique</li>
               <li>Endearing</li>

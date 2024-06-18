@@ -96,8 +96,55 @@ body {
   text-transform: uppercase;
 }
 
-.footerScroller {
-  height: max-content;
+.container {
+  overflow: hidden;
+  width: 200px; /* Adjust this width based on your need */
+  height: 50px; /* Adjust this height based on your need */
+  border: 1px solid #000;
   display: flex;
-  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.scrolling-text {
+  display: flex;
+  white-space: nowrap;
+}
+
+.footerScroller:first-child {
+  display: inline-block;
+  padding: 0 10px;
+  opacity: 0;
+  animation: appearPauseScroll 6s linear infinite;
+}
+
+.footerScroller:nth-child(2) {
+  display: inline-block;
+  padding: 0 10px;
+  opacity: 0;
+  animation: appearPauseScroll 6s linear infinite;
+}
+
+@keyframes appearPauseScroll {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }

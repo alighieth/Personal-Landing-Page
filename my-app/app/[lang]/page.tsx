@@ -3,6 +3,7 @@ import ContactForm from "@/components/ContactForm";
 import IntroBody from "@/components/IntroBody";
 import Values from "@/components/Values";
 import Skills from "@/components/Skills";
+import FooterPropganda from "@/components/FooterPropganda";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Skills />
       <Values />
       <ContactForm />
+      <FooterPropganda />
     </main>
   );
 }

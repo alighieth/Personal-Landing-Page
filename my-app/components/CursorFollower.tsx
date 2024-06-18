@@ -5,14 +5,14 @@ const CursorFollower = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const onMouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+    const handleMouseMove = (event: MouseEvent) => {
+      setPosition({ x: event.pageX, y: event.pageY });
     };
 
-    document.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      document.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
