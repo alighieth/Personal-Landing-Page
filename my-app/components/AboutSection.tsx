@@ -62,7 +62,7 @@ const EmploymentList: EmploymentCompanyProps[] = [
   },
 ];
 
-const x = {
+const x: { [key: number]: string } = {
   0: "border-b-2 border-mainBlue",
   1: "border-t-2 border-r-2 border-mainBlue",
   2: "border-t-2 border-l-2 border-mainBlue",
@@ -80,7 +80,7 @@ const AboutSection = async () => {
       {EmploymentList.map((item, index) => (
         <Employment
           index={index + 1}
-          borderStyle={x[index] as string}
+          borderStyle={x[index]}
           employmentInfo={item}
         />
       ))}
