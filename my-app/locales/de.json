@@ -8,9 +8,14 @@
     "About": "Uber Uns"
   },
   "about": {
-    "intro": "Wir sind eine Gruppe kreativer Experten, die sich dem Erreichen eines höheren Ziels verschrieben haben"
+    "intro": "Wir sind eine Gruppe kreativer Experten, die sich dem Erreichen eines höheren Ziels verschrieben haben",
+    "positions": "Positions"
   },
-  "products": {},
+  "products": {
+    "skills": "Fähigkeiten",
+    "passion": "Leidenschaft",
+    "passionInfo": "Als Softwareentwickler reicht meine Leidenschaft über die Codezeilen und innovativen Lösungen hinaus, die ich täglich erschaffe. Finanzielle Freiheit treibt mich an, da sie mir die Möglichkeit gibt, ein Leben zu gestalten, in dem die Möglichkeiten grenzenlos sind. Ich bin fasziniert von der Synergie zwischen Technologie und finanzieller Autonomie, bei der jedes Projekt und jede Investition mich einem Leben näher bringt, das frei von Einschränkungen ist. Dieses Streben geht nicht nur um Wohlstand; es geht um die Freiheit, zu schaffen, zu erkunden und bedeutungsvolle Entscheidungen nach meinen eigenen Vorstellungen zu treffen. Mit jedem Tastendruck und jeder strategischen Entscheidung gestalte ich ein Leben voller unbegrenzter Möglichkeiten und dauerhafter Erfüllung."
+  },
   "contact": {
     "getIn": "In Kontakt",
     "touch": "kommen"

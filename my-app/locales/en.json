@@ -5,12 +5,17 @@
     "Contact": "Contact",
     "Home": "Home",
     "Products": "Products",
-    "About": "About Us"
+    "About": "About Me"
   },
   "about": {
-    "intro": "We are a bunch of creative experts who are dedicated to achieving a higher aim"
+    "intro": "We are a bunch of creative experts who are dedicated to achieving a higher aim",
+    "positions": "Positions"
   },
-  "products": {},
+  "products": {
+    "skills": "Skills",
+    "passion": "Passion",
+    "passionInfo": "As a software engineer, my passion extends beyond the lines of code and innovative solutions I craft daily. Financial freedom fuels my drive, empowering me to shape a life where possibilities are limitless. I am captivated by the synergy between technology and financial autonomy, where each project and investment brings me a step closer to a future unbound by constraints. This pursuit is not just about wealth; it’s about the freedom to create, explore, and make impactful choices on my terms. With every keystroke and strategic decision, I am architecting a life of boundless opportunities and enduring fulfillment. "
+  },
   "contact": {
     "getIn": "Get In",
     "touch": "Touch"

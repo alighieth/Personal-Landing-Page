@@ -1,10 +1,5 @@
-import React, { ReactNode } from "react";
-
-interface ValueProps {
-  name: string;
-  description: string;
-  icon?: ReactNode;
-}
+import { getScopedI18n } from "@/locales/server";
+import React from "react";
 
 const skills: string[] = [
   "Frontend Development",
@@ -15,11 +10,13 @@ const skills: string[] = [
   "System Design",
   "Leadership and Mentorship",
 ];
-const Values = () => {
+
+const Values = async () => {
+  const t = await getScopedI18n("products");
   return (
     <section id="products" className="grid grid-cols-2">
       <div className="skills font-bold">
-        <h4 className="mb-2">Skills</h4>
+        <h4 className="mb-2">{t("skills")}</h4>
         <ol className="font-thin">
           {skills.map((skill) => (
             <li key={skill}>{skill}</li>
@@ -27,19 +24,8 @@ const Values = () => {
         </ol>
       </div>
       <div className="passion font-bold">
-        <h4 className="mb-2">Passion</h4>
-        <p className="font-thin">
-          As a software engineer, my passion extends beyond the lines of code
-          and innovative solutions I craft daily. Financial freedom fuels my
-          drive, empowering me to shape a life where possibilities are
-          limitless. I am captivated by the synergy between technology and
-          financial autonomy, where each project and investment brings me a step
-          closer to a future unbound by constraints. This pursuit is not just
-          about wealth; it’s about the freedom to create, explore, and make
-          impactful choices on my terms. With every keystroke and strategic
-          decision, I am architecting a life of boundless opportunities and
-          enduring fulfillment.
-        </p>
+        <h4 className="mb-2">{t("passion")}</h4>
+        <p className="font-thin">{t("passionInfo")}</p>
       </div>
     </section>
   );

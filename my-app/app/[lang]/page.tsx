@@ -1,4 +1,4 @@
-import AboutSection from "@/components/AboutSection";
+import AboutSection from "@/components/About";
 import ContactForm from "@/components/ContactForm";
 import IntroBody from "@/components/IntroBody";
 import Values from "@/components/Values";

@@ -1,24 +1,16 @@
 import React from "react";
-import { EmploymentCompanyProps } from "./AboutSection";
+import { EmploymentCompanyProps } from "./About";
 import Link from "next/link";
 
 export interface EmploymentWrapperProps {
-  index: number;
-  borderStyle: string;
   employmentInfo: EmploymentCompanyProps;
 }
 
 const Employment = (props: EmploymentWrapperProps) => {
-  const { index, borderStyle, employmentInfo } = props;
-  console.log(employmentInfo.startDate);
-  return (
-    <div
-      className={`relative w-full h-[10vh] overflow-hidden p-5 ${borderStyle}`}
-    >
-      <div className="absolute bottom-0 left-0 w-[5rem] h-[5rem] rounded-full flex justify-center items-center">
-        <span className="text-black text-4xl font-bold">{index}</span>
-      </div>
+  const { employmentInfo } = props;
 
+  return (
+    <div className={`relative w-full h-[10vh] overflow-hidden p-5 `}>
       <div
         id={`${employmentInfo.companyName}-info`}
         className="w-full flex flex-row justify-between items-center"
