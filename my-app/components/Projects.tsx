@@ -20,7 +20,7 @@ const ProjectList: ProjectItemProps[] = [
     techStack: "JavaScript, React, Node.js, MongoDB, MUI, ANTD",
   },
   {
-    name: "Hospital Appointment Managment Syste",
+    name: "Hospital Appointment Managment System",
     about:
       "Led the development of an online appointment management system, prioritizing user privacy, data security, and performance optimization.",
     techStack:
@@ -39,7 +39,7 @@ const ProjectList: ProjectItemProps[] = [
     techStack: "JavaScript, React, Node.js, MongoDB, MUI, ANTD",
   },
   {
-    name: "Hospital Appointment Managment Syste",
+    name: "Hospital Appointment Managment System",
     about:
       "Led the development of an online appointment management system, prioritizing user privacy, data security, and performance optimization.",
     techStack:
@@ -51,23 +51,16 @@ const Projects = () => {
   return (
     <>
       {ProjectList.map((project) => (
-        <ProjectComponent {...project} />
+        <div className="w-full border p-1">
+          <p>
+            <span className="font-bold mr-1">{project.name}</span> |
+            <span className="font-thin ml-1">{project.techStack}</span>
+          </p>
+
+          <p>{project.about}</p>
+        </div>
       ))}
     </>
-  );
-};
-
-const ProjectComponent = (props: ProjectItemProps) => {
-  const { about, name, techStack } = props;
-  return (
-    <div className="w-full border p-1">
-      <p>
-        <span className="font-bold mr-1">{name}</span> |
-        <span className="font-thin ml-1">{techStack}</span>
-      </p>
-
-      <p>{about}</p>
-    </div>
   );
 };
 

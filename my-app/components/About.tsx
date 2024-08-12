@@ -72,6 +72,7 @@ const EmploymentList: EmploymentCompanyProps[] = [
 
 const AboutSection = async () => {
   const t = await getScopedI18n("about");
+  // TODO create a horizantal tabs for those in aboutTabs and include positions also
   return (
     <>
       <section
@@ -79,18 +80,11 @@ const AboutSection = async () => {
         className="w-full mt-[80vh] flex flex-col justify-start items-center gap-5"
       >
         <h1 className="text-4xl self-start">{t("positions")}</h1>
+
         <div className="w-full border-l-4 border-mainBlue">
           {EmploymentList.map((item) => (
             <Employment key={item.companyName} employmentInfo={item} />
           ))}
-        </div>
-
-        <div className="w-full rounded-3xl mt-5 grid grid-flow-col grid-cols-5 h-[50vh]">
-          <div className="bg-myPhoto bg-cover bg-no-repeat w-full h-full col-span-3"></div>
-          <div className="w-full h-full col-span-2 overflow-auto">
-            <AboutTabs />
-          </div>
-          <div className="col-span-1 bg-white"></div>
         </div>
       </section>
     </>

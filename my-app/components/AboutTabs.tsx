@@ -88,7 +88,7 @@ const AboutTabs = () => {
       <div className="col-span-2 w-full h-full flex justify-center items-center pl-5">
         {tabs[activeTab].content}
       </div>
-      <div className="col-span-1 h-full flex flex-col justify-center items-end">
+      <div className="col-span-1 h-full flex flex-col justify-center items-end fixed right-0 bottom-1">
         {tabs.map((tab, index) => (
           <button
             onClick={() => handleTabClick(index)}
