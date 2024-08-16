@@ -2,6 +2,7 @@
 import React, { ReactNode, useState } from "react";
 import Employment from "./Employment";
 import Projects from "./Projects";
+import AboutMe from "./AboutMe";
 
 interface TabItemProps {
   key: string;
@@ -64,6 +65,11 @@ const tabs: TabItemProps[] = [
         </h3>
       </section>
     ),
+  },
+  {
+    key: "AboutMe",
+    label: "About Me",
+    content: <AboutMe />,
   },
 ];
 
