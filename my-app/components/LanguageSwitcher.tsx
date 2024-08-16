@@ -42,7 +42,7 @@ const LanguageSwitcher = () => {
                 >
                   <span className="uppercase">{localeOption}</span>
                 </button>
-              )
+              ),
           )}
         </div>
       )}

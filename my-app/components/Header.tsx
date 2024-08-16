@@ -35,6 +35,11 @@ const Header = async (params: { locale: string }) => {
       label: t("Contact"),
       href: "#contact",
     },
+    {
+      key: "Resume",
+      label: t("resume"),
+      href: "https://drive.google.com/file/d/1WAdKAew2-ZJTkLxYhWH5-AiEUhAUDxSj/view?usp=sharing",
+    },
   ];
 
   return (

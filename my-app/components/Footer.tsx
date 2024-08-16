@@ -38,8 +38,7 @@ const ContactOptionList: ContactOptionsProps[] = [
   {
     name: "Upwork",
     icon: "/facebook.png",
-    url:
-      "https://www.upwork.com/freelancers/~0165186670554350de?mp_source=share",
+    url: "https://www.upwork.com/freelancers/~0165186670554350de?mp_source=share",
   },
   {
     name: "(+20)1211399151",

@@ -1,5 +1,6 @@
 "use client";
 import React, { ReactNode, useState } from "react";
+import Employment from "./Employment";
 import Projects from "./Projects";
 
 interface TabItemProps {
@@ -15,15 +16,9 @@ interface LanguageItemProps {
 
 const tabs: TabItemProps[] = [
   {
-    key: "Languages",
-    label: "Languages",
-    content: (
-      <section className="">
-        <h3>Arabic</h3>
-        <h3>English</h3>
-        <h3>German</h3>
-      </section>
-    ),
+    key: "positions",
+    label: "Positions",
+    content: <Employment />,
   },
   {
     key: "Projects",
@@ -32,6 +27,17 @@ const tabs: TabItemProps[] = [
       <div className="w-full h-full flex flex-col justify-evenly items-start overflow-auto">
         <Projects />
       </div>
+    ),
+  },
+  {
+    key: "Languages",
+    label: "Languages",
+    content: (
+      <section className="">
+        <h3>Arabic</h3>
+        <h3>English</h3>
+        <h3>German</h3>
+      </section>
     ),
   },
   {
@@ -61,21 +67,6 @@ const tabs: TabItemProps[] = [
   },
 ];
 
-const languages: LanguageItemProps[] = [
-  {
-    name: "English",
-    level: 8,
-  },
-  {
-    name: "Arabic",
-    level: 10,
-  },
-  {
-    name: "German",
-    level: 2,
-  },
-];
-
 const AboutTabs = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
@@ -84,16 +75,13 @@ const AboutTabs = () => {
   };
 
   return (
-    <section className="w-full h-full grid grid-flow-col grid-cols-3">
-      <div className="col-span-2 w-full h-full flex justify-center items-center pl-5">
-        {tabs[activeTab].content}
-      </div>
-      <div className="col-span-1 h-full flex flex-col justify-center items-end fixed right-0 bottom-1">
+    <section className="w-full">
+      <div id="about__employment_tabs" className="w-full">
         {tabs.map((tab, index) => (
           <button
             onClick={() => handleTabClick(index)}
             key={tab.key}
-            className={`p-5 border-r-2 ${
+            className={`p-5 border-b-2 text-xl ${
               activeTab === index
                 ? "border-mainBlue text-mainBlue"
                 : "text-white border-white"
@@ -102,6 +90,13 @@ const AboutTabs = () => {
             {tab.label}
           </button>
         ))}
+      </div>
+
+      <div
+        id="about__employment_content"
+        className="min-h-[40vh] max-h-[60vh] overflow-scroll"
+      >
+        {tabs[activeTab].content}
       </div>
     </section>
   );

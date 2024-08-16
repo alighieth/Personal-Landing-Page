@@ -47,20 +47,32 @@ const ProjectList: ProjectItemProps[] = [
   },
 ];
 
-const Projects = () => {
-  return (
-    <>
-      {ProjectList.map((project) => (
-        <div className="w-full border p-1">
-          <p>
-            <span className="font-bold mr-1">{project.name}</span> |
-            <span className="font-thin ml-1">{project.techStack}</span>
-          </p>
+const Projects = () =>
+  ProjectList.map((project) => (
+    <ProjectsComponent key={project.name} projectInfo={project} />
+  ));
 
-          <p>{project.about}</p>
+const ProjectsComponent = (props: { projectInfo: ProjectItemProps }) => {
+  const { projectInfo } = props;
+
+  return (
+    <div className={`relative w-full overflow-hidden p-5 `}>
+      <div
+        id={`${projectInfo.name}-info`}
+        className="w-full flex flex-row justify-between items-center"
+      >
+        <div className="text-left">
+          <div className="flex flex-row justify-start items-end gap-2">
+            <h4 className="text-3xl">{projectInfo.name}</h4>
+            <h6 className="font-thin">| {projectInfo.techStack}</h6>
+          </div>
+
+          <ul className="project__description">
+            <li>{projectInfo.about}</li>
+          </ul>
         </div>
-      ))}
-    </>
+      </div>
+    </div>
   );
 };
 
