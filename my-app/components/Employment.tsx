@@ -45,7 +45,7 @@ const EmploymentList: EmploymentCompanyProps[] = [
   },
   {
     companyName: "Tekunda",
-    companyLocation: "Cairo, Egypt, Remote",
+    companyLocation: "Cairo, Egypt",
     companyField: "SaaS, DevOps",
     position: "Full Stack Engineer 2 and Founding Team Member",
     startDate: new Date("1 July 2022").toDateString(),
