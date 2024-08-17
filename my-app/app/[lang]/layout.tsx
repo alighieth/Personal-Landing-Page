@@ -30,9 +30,7 @@ export default async function RootLayout({
   const t = await getScopedI18n("footer");
   return (
     <html lang="en">
-      <body
-        className={`scroll-smooth bg-contain bg-black flex flex-col justify-start items-center`}
-      >
+      <body className="w-[100vw] scroll-smooth bg-contain bg-black flex flex-col justify-start items-center">
         <I18nProviderClient locale={lang}>
           <ScrollWatcher />
           <ScrollToTop />
