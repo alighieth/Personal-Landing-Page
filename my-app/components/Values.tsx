@@ -25,7 +25,7 @@ const Values = async () => {
       </div>
       <div className="passion font-bold">
         <h4 className="mb-2">{t("passion")}</h4>
-        <p className="font-thin">{t("passionInfo")}</p>
+        <p className="font-thin text-justify">{t("passionInfo")}</p>
       </div>
     </section>
   );
