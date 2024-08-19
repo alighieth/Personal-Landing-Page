@@ -17,6 +17,11 @@ interface LanguageItemProps {
 
 const tabs: TabItemProps[] = [
   {
+    key: "AboutMe",
+    label: "About Me",
+    content: <AboutMe />,
+  },
+  {
     key: "positions",
     label: "Positions",
     content: <Employment />,
@@ -66,11 +71,7 @@ const tabs: TabItemProps[] = [
       </section>
     ),
   },
-  {
-    key: "AboutMe",
-    label: "About Me",
-    content: <AboutMe />,
-  },
+  
 ];
 
 const AboutTabs = () => {
