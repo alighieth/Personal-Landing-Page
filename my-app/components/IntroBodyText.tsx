@@ -21,13 +21,13 @@ const IntroBodyText = () => {
     <>
       <h1
         style={{ transform: `translateY(${-scrollY * 0.75}px)` }}
-        className="text-[30vw] tracking-widest"
+        className="text-[40vw] md:tracking-widest"
       >
         {t("Hello")}
       </h1>
       <h3
         style={{ transform: `translateY(${-scrollY * 0.75}px)` }}
-        className="font-thin text-6xl"
+        className="font-thin text-3xl md:text-6xl"
       >
         {t("intro")}
       </h3>

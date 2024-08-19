@@ -152,3 +152,15 @@ body {
     opacity: 0;
   }
 }
+
+.introBody__img {
+  width: 25%;
+  height: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .introBody__img {
+    width: 55%;
+    height: auto;
+  }
+}
