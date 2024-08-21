@@ -3,6 +3,7 @@ import React, { ReactNode, useState } from "react";
 import Employment from "./Employment";
 import Projects from "./Projects";
 import AboutMe from "./AboutMe";
+import Quote from "./Quote";
 
 interface TabItemProps {
   key: string;
@@ -62,16 +63,8 @@ const tabs: TabItemProps[] = [
   {
     key: "Quote",
     label: "Quote",
-    content: (
-      <section className="">
-        <h3>
-          Do not go where the path may lead, go instead where there is no path
-          and leave a trail. -Ralph Waldo Emerson
-        </h3>
-      </section>
-    ),
+    content: <Quote />,
   },
-  
 ];
 
 const AboutTabs = () => {
@@ -101,7 +94,7 @@ const AboutTabs = () => {
 
       <div
         id="about__employment_content"
-        className="min-h-[40vh] max-h-[60vh] overflow-scroll"
+        className="min-h-[40vh] max-h-[60vh] overflow-scroll p-5 box-border"
       >
         {tabs[activeTab].content}
       </div>
