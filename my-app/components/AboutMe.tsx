@@ -8,7 +8,7 @@ const AboutMe = () => {
       className="relative w-full h-auto p-5 md:h-[50vh] grid grid-cols-1 md:grid-cols-3 gap-5"
     >
       {/* My image */}
-      <div className="relative h-40 md:h-full flex justify-center items-center">
+      <div className="flex justify-center items-center">
         <Image
           src="/me.png"
           alt="me"

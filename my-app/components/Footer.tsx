@@ -57,7 +57,7 @@ const Footer = async () => {
   return (
     <footer
       id="footer"
-      className="relative p-4 md:grid md:grid-cols-4 w-full rounded shadow font-bold overflow-hidden"
+      className="relative p-4 md:grid md:grid-cols-4 w-full h-auto md:h-[25vh] rounded shadow font-bold overflow-hidden"
     >
       <div
         id="footerLogo"
@@ -82,7 +82,7 @@ const Footer = async () => {
         id="footeContactInfo"
         className="md:col-span-2 text-white flex flex-col gap-5 justify-start"
       >
-        <h3 className="text-6xl self-center md:self-start">{t("contact")}</h3>
+        <h3 className="text-6xl self-center mt-5 md:mt-0 md:self-start">{t("contact")}</h3>
         <div className="flex flex-row justify-start items-center gap-5 text-3xl flex-wrap">
           {ContactOptionList.map((option) => (
             <a
@@ -97,7 +97,7 @@ const Footer = async () => {
       </div>
       <div
         id="footeContactInfo"
-        className="md:col-span-1 flex flex-col justify-center"
+        className="md:col-span-1 flex flex-col justify-center items-baseline"
       >
         <Image
           src="/greek1.webp"

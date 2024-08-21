@@ -21,26 +21,26 @@ const EmploymentList: EmploymentCompanyProps[] = [
     companyLocation: "Palo Alto, CA, Remote",
     companyField: "Daily Services",
     position: "Full Stack Engineer",
-    startDate: new Date("08/01/2024").toDateString(),
+    startDate: "AUG 2024",
     endDate: "Present",
     website: "https://www.koncile.ai/",
   },
   {
     companyName: "Koncile SAS",
-    companyLocation: "Paris, Ile-de-France, France, Remote",
+    companyLocation: "Paris, Ile-de-France",
     companyField: "Financial",
     position: "Full Stack Engineer",
-    startDate: new Date("05/01/2024").toDateString(),
-    endDate: new Date("08/01/2024").toDateString(),
+    startDate: "MAR 2024",
+    endDate: "AUG 2024",
     website: "https://www.koncile.ai/",
   },
   {
     companyName: "Syntilio",
-    companyLocation: "Amsterdam, Netherlands, Remote",
+    companyLocation: "Amsterdam, Netherlands",
     companyField: "Healthcare",
     position: "Software/Salesforce Engineer",
-    startDate: new Date("1 July 2022").toDateString(),
-    endDate: new Date("05/01/2024").toDateString(),
+    startDate: "JUL 2022",
+    endDate: "MAR 2024",
     website: "https://syntilio.com/",
   },
   {
@@ -48,8 +48,8 @@ const EmploymentList: EmploymentCompanyProps[] = [
     companyLocation: "Cairo, Egypt",
     companyField: "SaaS, DevOps",
     position: "Full Stack Engineer 2 and Founding Team Member",
-    startDate: new Date("1 July 2022").toDateString(),
-    endDate: new Date("05/01/2024").toDateString(),
+    startDate: "JUL 2022",
+    endDate: "MAR 2024",
     website: "https://tekunda.com/",
   },
   {
@@ -57,8 +57,8 @@ const EmploymentList: EmploymentCompanyProps[] = [
     companyLocation: "Cairo, Egypt",
     companyField: "Human Resources",
     position: "Full Stack Intern",
-    startDate: new Date("01/02/2022").toDateString(),
-    endDate: new Date("01/07/2022").toDateString(),
+    startDate: "FEB 2022",
+    endDate: "JUL 2022",
     website: "https://bynar.systems/",
   },
   {
@@ -66,8 +66,8 @@ const EmploymentList: EmploymentCompanyProps[] = [
     companyLocation: "Cairo, Egypt",
     companyField: "",
     position: "Student",
-    startDate: new Date("01/09/2019").toDateString(),
-    endDate: new Date("01/07/2024").toDateString(),
+    startDate: "SEP 2019",
+    endDate: "SEP 2024",
     website: "https://www.guc.edu.eg/",
   },
 ];
@@ -80,12 +80,12 @@ const EmploymentComponent = (props: EmploymentWrapperProps) => {
   const { employmentInfo } = props;
 
   return (
-    <div className={`relative w-full h-[10vh] overflow-hidden p-5 `}>
+    <div className="relative w-full h-auto overflow-hidden p-5 text-justify">
       <div
         id={`${employmentInfo.companyName}-info`}
-        className="w-full flex flex-row justify-between items-center"
+        className="w-full flex flex-row justify-between items-start"
       >
-        <div className="text-left">
+        <div className="text-left flex-1">
           <Link
             href={employmentInfo.website}
             className="text-3xl hover:text-mainBlue transition-colors delay-75"
@@ -95,7 +95,7 @@ const EmploymentComponent = (props: EmploymentWrapperProps) => {
           <h6 className="font-thin">{employmentInfo.position}</h6>
         </div>
 
-        <div className="text-right">
+        <div className="text-right flex-1">
           <span>
             {employmentInfo.startDate} - {employmentInfo.endDate}
           </span>
