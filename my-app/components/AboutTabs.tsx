@@ -37,30 +37,6 @@ const tabs: TabItemProps[] = [
     ),
   },
   {
-    key: "Languages",
-    label: "Languages",
-    content: (
-      <section className="">
-        <h3>Arabic</h3>
-        <h3>English</h3>
-        <h3>German</h3>
-      </section>
-    ),
-  },
-  {
-    key: "Knowledge",
-    label: "Knowledge",
-    content: (
-      <section className="">
-        <h3>Responsive and Mobile Ready</h3>
-        <h3>Full-stack web app</h3>
-        <h3>API Integration</h3>
-        <h3>Database Integration</h3>
-        <h3>CMS Development</h3>
-      </section>
-    ),
-  },
-  {
     key: "Quote",
     label: "Quote",
     content: <Quote />,

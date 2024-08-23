@@ -27,23 +27,16 @@ const ProjectList: ProjectItemProps[] = [
       "Typescript, JavaScript, Next.js, Node.js, MongoDB, ANTD, TailwindCSS",
   },
   {
-    name: "Roboadvisor",
+    name: "Syntilio Website",
     about:
       "Developed and implemented machine learning algorithms for a roboadvisor platform, improving investment decision-making and portfolio performance.",
     techStack: "Typescript, Python, Next.js, FastAPI, Scikit-Learn",
   },
   {
-    name: "Courser Replica",
+    name: "Tekunda Website",
     about:
       "Built a full online learning system using the Scrum Agile Methodology and the MERN stack (MongoDB, Express, React, Node).",
     techStack: "JavaScript, React, Node.js, MongoDB, MUI, ANTD",
-  },
-  {
-    name: "Hospital Appointment Managment System",
-    about:
-      "Led the development of an online appointment management system, prioritizing user privacy, data security, and performance optimization.",
-    techStack:
-      "Typescript, JavaScript, Next.js, Node.js, MongoDB, ANTD, TailwindCSS",
   },
 ];
 

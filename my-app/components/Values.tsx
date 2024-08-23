@@ -14,7 +14,10 @@ const skills: string[] = [
 const Values = async () => {
   const t = await getScopedI18n("products");
   return (
-    <section id="products" className="p-5 text-justify md:p-0 md:grid md:grid-cols-2">
+    <section
+      id="products"
+      className="p-5 text-justify md:p-0 md:grid md:grid-cols-2"
+    >
       <div className="skills">
         <h4 className="mb-2 font-bold">{t("skills")}</h4>
         <ol className="font-thin">
