@@ -14,7 +14,7 @@ interface HeaderOptions {
 
 const Header = async (params: { locale: string }) => {
   const t = useScopedI18n("home");
-  const [isOptionsOpen, setIsOptionsOpen] = useState(true);
+  const [isOptionsOpen, setIsOptionsOpen] = useState(false);
 
   const toggleOptions = () => {
     setIsOptionsOpen((prev) => !prev);
