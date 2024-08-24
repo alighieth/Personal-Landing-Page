@@ -1,7 +1,9 @@
-import { getScopedI18n } from "@/locales/server";
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useScopedI18n } from "@/locales/client";
 
 interface HeaderOptions {
   key: string;
@@ -11,7 +13,24 @@ interface HeaderOptions {
 }
 
 const Header = async (params: { locale: string }) => {
-  const t = await getScopedI18n("home");
+  const t = useScopedI18n("home");
+  const [isOptionsOpen, setIsOptionsOpen] = useState(false);
+
+  const toggleOptions = () => {
+    setIsOptionsOpen((prev) => !prev);
+  };
+
+  useEffect(() => {
+    if (isOptionsOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOptionsOpen]);
 
   const headerOptions: HeaderOptions[] = [
     {
@@ -42,22 +61,47 @@ const Header = async (params: { locale: string }) => {
   ];
 
   return (
-    <header className="w-full max-w-maxScreen flex flex-row items-center justify-between h-[20vh] box-border overflow-hidden">
-      <h3>alighieth.</h3>
-      <ol className="flex flex-row gap-7">
-        {headerOptions.map((option) => (
-          <Link
-            key={option.key}
-            className="hover:bg-mainBlue p-2 rounded transition-all delay-75"
-            href={option.href}
-          >
-            {option.label}
-          </Link>
-        ))}
+    <>
+      <header className="w-full p-5 md:p-8 lg:p-10 max-w-maxScreen flex flex-row items-center justify-between h-[20vh] lg:h-[15vh] overflow-hidden">
+        <h3 className="font-bold text-xl md:text-2xl lg:text-3xl text-white">
+          alighieth.
+        </h3>
+        <div
+          className="header__options cursor-pointer"
+          onClick={toggleOptions}
+        ></div>
+      </header>
 
-        <LanguageSwitcher />
-      </ol>
-    </header>
+      <div
+        className={`header__options_div fixed inset-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-start items-start md:items-center gap-8 md:gap-10 lg:gap-12 transition-transform duration-300 ease-in-out ${
+          isOptionsOpen ? "translate-y-0" : "translate-y-full"
+        }`}
+      >
+        <div className="w-full p-5 md:p-8 lg:p-10 max-w-maxScreen flex flex-row items-center justify-between h-[20vh] lg:h-[15vh] overflow-hidden">
+          <h3 className="font-bold text-xl md:text-2xl lg:text-3xl text-white">
+            alighieth.
+          </h3>
+          <div
+            className="header__options cursor-pointer -rotate-45"
+            onClick={toggleOptions}
+          ></div>
+        </div>
+
+        <ol className="flex flex-col w-full max-w-maxScreen gap-5 md:gap-[10vmin] p-5">
+          {headerOptions.map((option) => (
+            <Link
+              key={option.key}
+              className="hover:text-mainBlue p-2 rounded-md transition-all duration-200 ease-in-out text-4xl md:text-[8vmin] lg:text-[6vmin] text-white"
+              href={option.href}
+              onClick={toggleOptions}
+            >
+              {option.label}
+            </Link>
+          ))}
+          <LanguageSwitcher />
+        </ol>
+      </div>
+    </>
   );
 };
 
