@@ -83,7 +83,7 @@ const Header = async (params: { locale: string }) => {
       {headerOptions.map((option) => (
         <button
           key={option.key}
-          className="outline text-left hover:text-mainBlue transition-all duration-200 ease-in-out text-4xl md:text-[8vmin] lg:text-[6vmin] text-white"
+          className="text-left hover:text-mainBlue transition-all duration-200 ease-in-out text-4xl md:text-[8vmin] lg:text-[6vmin] text-white"
           // href={option.href}
           onClick={() => handleClick(option.href)}
         >
