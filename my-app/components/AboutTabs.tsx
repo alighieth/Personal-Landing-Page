@@ -70,7 +70,7 @@ const AboutTabs = () => {
 
       <div
         id="about__employment_content"
-        className="min-h-[40vh] max-h-[60vh] overflow-scroll p-5 box-border"
+        className="min-h-[40vh] max-h-[80vh] md:max-h-[60vh] overflow-scroll p-5 box-border"
       >
         {tabs[activeTab].content}
       </div>
