@@ -16,7 +16,7 @@ const Values = async () => {
   return (
     <section
       id="products"
-      className="p-5 text-justify md:p-0 md:grid md:grid-cols-2"
+      className="p-5 max-w-maxScreen m-auto text-justify md:p-0 md:grid md:grid-cols-2"
     >
       <div className="skills">
         <h4 className="mb-2 font-bold">{t("skills")}</h4>

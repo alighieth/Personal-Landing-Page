@@ -17,37 +17,37 @@ const ContactOptionList: ContactOptionsProps[] = [
   },
   {
     name: "Github",
-    icon: "/facebook.png",
+    icon: "",
     url: "https://github.com/alighieth",
   },
   {
     name: "Instagram",
-    icon: "/facebook.png",
+    icon: "",
     url: "https://www.instagram.com/alighieth/",
   },
   {
     name: "Leetcode",
-    icon: "/facebook.png",
+    icon: "",
     url: "https://leetcode.com/alighieth/",
   },
   {
     name: "Medium",
-    icon: "/facebook.png",
+    icon: "",
     url: "https://medium.com/@alighieth",
   },
   {
     name: "Upwork",
-    icon: "/facebook.png",
+    icon: "",
     url: "https://www.upwork.com/freelancers/~0165186670554350de?mp_source=share",
   },
   {
     name: "(+20)1211399151",
-    icon: "/facebook.png",
+    icon: "",
     url: "tel:(+20)1211399151",
   },
   {
     name: "alighieth2709@gmail.com",
-    icon: "/facebook.png",
+    icon: "",
     url: "mailto:alighieth2709@gmail.com",
   },
 ];
@@ -57,12 +57,9 @@ const Footer = async () => {
   return (
     <footer
       id="footer"
-      className="relative p-4 md:grid md:grid-cols-4 w-full h-auto md:h-[25vh] rounded shadow font-bold overflow-hidden"
+      className="relative p-5 font-bold flex flex-row gap-5 flex-wrap justify-center items-start box-border"
     >
-      <div
-        id="footerLogo"
-        className="md:col-span-1 text-white flex flex-col gap-5 justify-start items-center"
-      >
+      <div className="flex-1 h-full text-white flex flex-col gap-5 justify-start items-center">
         <h3 className="text-6xl">alighieth.</h3>
         <div className="uppercase w-1/2 flex flex-col justify-start items-start">
           <h6> I work to give customers</h6>
@@ -78,12 +75,12 @@ const Footer = async () => {
           <h6>Experiences</h6>
         </div>
       </div>
-      <div
-        id="footeContactInfo"
-        className="md:col-span-2 text-white flex flex-col gap-5 justify-start"
-      >
-        <h3 className="text-6xl self-center mt-5 md:mt-0 md:self-start">{t("contact")}</h3>
-        <div className="flex flex-row justify-start items-center gap-5 text-3xl flex-wrap">
+
+      <div className="flex-1 h-full text-white flex flex-col gap-5 justify-start">
+        <h3 className="text-6xl self-center mt-5 md:mt-0 md:self-start">
+          {t("contact")}
+        </h3>
+        <div className="flex flex-row justify-start items-center gap-5 text-2xl flex-wrap">
           {ContactOptionList.map((option) => (
             <a
               href={option.url}
@@ -95,7 +92,8 @@ const Footer = async () => {
           ))}
         </div>
       </div>
-      <div
+
+      {/* <div
         id="footeContactInfo"
         className="md:col-span-1 flex flex-col justify-center items-baseline"
       >
@@ -113,7 +111,7 @@ const Footer = async () => {
           className="self-end"
           alt="greek skulpture"
         />
-      </div>
+      </div> */}
     </footer>
   );
 };

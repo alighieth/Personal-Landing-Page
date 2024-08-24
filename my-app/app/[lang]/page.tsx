@@ -8,7 +8,7 @@ import Skills from "@/components/Skills";
 // TODO bug with progress bar on mobile
 export default function Home() {
   return (
-    <main className="w-full max-w-maxScreen scroll-smooth">
+    <main className="w-full scroll-smooth">
       <IntroBody />
       <AboutSection />
       <Skills />

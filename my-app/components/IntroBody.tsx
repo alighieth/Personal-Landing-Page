@@ -9,7 +9,7 @@ const IntroBody = async () => {
   return (
     <div
       id="introBody"
-      className="absolute inset-0 top-[20vh] w-[100vw] h-[80vh] flex flex-col justify-center md:justify-start items-center overflow-hidden"
+      className="relative w-[100vw] h-[80vh] flex flex-col justify-center md:justify-start items-center overflow-hidden"
     >
       <IntroBodyText />
 

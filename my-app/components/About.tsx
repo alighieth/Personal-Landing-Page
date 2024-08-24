@@ -7,14 +7,12 @@ const AboutSection = async () => {
   const t = await getScopedI18n("about");
   // TODO create a horizantal tabs for those in aboutTabs and include positions also
   return (
-    <>
-      <section
-        id="about"
-        className="w-full mt-[80vh] flex flex-col justify-start items-center gap-5"
-      >
-        <AboutTabs />
-      </section>
-    </>
+    <section
+      id="about"
+      className="w-full max-w-maxScreen m-auto flex flex-col justify-start items-center gap-5"
+    >
+      <AboutTabs />
+    </section>
   );
 };
 

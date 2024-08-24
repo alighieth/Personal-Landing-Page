@@ -58,7 +58,7 @@ const Skills = () => {
       id="skills"
       data-direction="right"
       data-speed="slow"
-      className="scroller w-full h-[20vh] flex flex-row justify-start items-center gap-5 text-3xl overflow-hidden "
+      className="scroller max-w-maxScreen m-auto w-full h-[20vh] flex flex-row justify-start items-center gap-5 text-3xl overflow-hidden "
     >
       <ul className="tag-list scroller__inner flex flex-wrap gap-4">
         {skills.map((skill) => (

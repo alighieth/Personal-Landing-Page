@@ -13,7 +13,7 @@ const ContactForm = () => {
     <section
       ref={containerRef}
       id="contact"
-      className="relative w-full h-[100vh] overflow-visible text-white flex flex-col justify-center"
+      className="relative w-full h-[100vh] text-white flex flex-col justify-center"
     >
       <h2
         id="h2-1"

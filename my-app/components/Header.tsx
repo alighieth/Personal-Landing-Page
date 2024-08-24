@@ -14,7 +14,7 @@ interface HeaderOptions {
 
 const Header = async (params: { locale: string }) => {
   const t = useScopedI18n("home");
-  const [isOptionsOpen, setIsOptionsOpen] = useState(false);
+  const [isOptionsOpen, setIsOptionsOpen] = useState(true);
 
   const toggleOptions = () => {
     setIsOptionsOpen((prev) => !prev);
@@ -60,46 +60,45 @@ const Header = async (params: { locale: string }) => {
     },
   ];
 
+  const HeaderBar = (props: { open: boolean }) => (
+    <header className="w-full p-5 max-w-maxScreen flex flex-row items-center justify-between h-[20vh] overflow-hidden">
+      <h3 className="font-bold text-xl md:text-2xl lg:text-3xl text-white">
+        alighieth.
+      </h3>
+      <div
+        className={`bg-white w-12 h-2 cursor-pointer ${props.open ? "-rotate-45" : ""}`}
+        onClick={toggleOptions}
+      ></div>
+    </header>
+  );
+
+  const NavBar = () => (
+    <ol className="flex flex-col w-full max-w-maxScreen gap-5 md:gap-[10vmin] p-5">
+      {headerOptions.map((option) => (
+        <Link
+          key={option.key}
+          className="hover:text-mainBlue transition-all duration-200 ease-in-out text-4xl md:text-[8vmin] lg:text-[6vmin] text-white"
+          href={option.href}
+          onClick={toggleOptions}
+        >
+          {option.label}
+        </Link>
+      ))}
+      <LanguageSwitcher />
+    </ol>
+  );
+
   return (
     <>
-      <header className="w-full p-5 md:p-8 lg:p-10 max-w-maxScreen flex flex-row items-center justify-between h-[20vh] lg:h-[15vh] overflow-hidden">
-        <h3 className="font-bold text-xl md:text-2xl lg:text-3xl text-white">
-          alighieth.
-        </h3>
-        <div
-          className="header__options cursor-pointer"
-          onClick={toggleOptions}
-        ></div>
-      </header>
+      <HeaderBar open={false} />
 
       <div
-        className={`header__options_div fixed inset-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-start items-start md:items-center gap-8 md:gap-10 lg:gap-12 transition-transform duration-300 ease-in-out ${
+        className={`outline header__options_div fixed inset-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-start items-start md:items-center transition-transform duration-300 ease-in-out ${
           isOptionsOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >
-        <div className="w-full p-5 md:p-8 lg:p-10 max-w-maxScreen flex flex-row items-center justify-between h-[20vh] lg:h-[15vh] overflow-hidden">
-          <h3 className="font-bold text-xl md:text-2xl lg:text-3xl text-white">
-            alighieth.
-          </h3>
-          <div
-            className="header__options cursor-pointer -rotate-45"
-            onClick={toggleOptions}
-          ></div>
-        </div>
-
-        <ol className="flex flex-col w-full max-w-maxScreen gap-5 md:gap-[10vmin] p-5">
-          {headerOptions.map((option) => (
-            <Link
-              key={option.key}
-              className="hover:text-mainBlue p-2 rounded-md transition-all duration-200 ease-in-out text-4xl md:text-[8vmin] lg:text-[6vmin] text-white"
-              href={option.href}
-              onClick={toggleOptions}
-            >
-              {option.label}
-            </Link>
-          ))}
-          <LanguageSwitcher />
-        </ol>
+        <HeaderBar open={true} />
+        <NavBar />
       </div>
     </>
   );
