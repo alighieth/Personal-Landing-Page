@@ -14,8 +14,14 @@ interface HeaderOptions {
 
 const Header = async (params: { locale: string }) => {
   const t = useScopedI18n("home");
-  const [isOptionsOpen, setIsOptionsOpen] = useState(false);
+  const [isOptionsOpen, setIsOptionsOpen] = useState(true);
 
+  function handleClick(id: string) {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+    toggleOptions();
+  }
   const toggleOptions = () => {
     setIsOptionsOpen((prev) => !prev);
   };
@@ -36,22 +42,22 @@ const Header = async (params: { locale: string }) => {
     {
       key: "Home",
       label: t("Home"),
-      href: "#home",
+      href: "home",
     },
     {
       key: "About",
       label: t("About"),
-      href: "#about",
+      href: "about",
     },
     {
       key: "Products",
       label: t("Products"),
-      href: "#products",
+      href: "products",
     },
     {
       key: "Contact",
       label: t("Contact"),
-      href: "#contact",
+      href: "contact",
     },
     {
       key: "Resume",
@@ -75,14 +81,14 @@ const Header = async (params: { locale: string }) => {
   const NavBar = () => (
     <ol className="flex flex-col w-full max-w-maxScreen gap-5 md:gap-[10vmin] p-5">
       {headerOptions.map((option) => (
-        <Link
+        <button
           key={option.key}
-          className="hover:text-mainBlue transition-all duration-200 ease-in-out text-4xl md:text-[8vmin] lg:text-[6vmin] text-white"
-          href={option.href}
-          onClick={toggleOptions}
+          className="outline text-left hover:text-mainBlue transition-all duration-200 ease-in-out text-4xl md:text-[8vmin] lg:text-[6vmin] text-white"
+          // href={option.href}
+          onClick={() => handleClick(option.href)}
         >
           {option.label}
-        </Link>
+        </button>
       ))}
       <LanguageSwitcher />
     </ol>
@@ -93,7 +99,7 @@ const Header = async (params: { locale: string }) => {
       <HeaderBar open={false} />
 
       <div
-        className={`outline header__options_div fixed inset-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-start items-start md:items-center transition-transform duration-300 ease-in-out ${
+        className={`fixed inset-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col justify-start items-start md:items-center transition-transform duration-300 ease-in-out ${
           isOptionsOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >

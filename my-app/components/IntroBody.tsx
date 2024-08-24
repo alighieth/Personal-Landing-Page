@@ -8,7 +8,7 @@ import greekKing from "../public/greek-king.webp";
 const IntroBody = async () => {
   return (
     <div
-      id="introBody"
+      id="home"
       className="relative w-[100vw] h-[80vh] flex flex-col justify-center md:justify-start items-center overflow-hidden"
     >
       <IntroBodyText />
