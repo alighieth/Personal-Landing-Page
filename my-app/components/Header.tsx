@@ -16,12 +16,6 @@ const Header = async (params: { locale: string }) => {
   const t = useScopedI18n("home");
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
 
-  function handleClick(id: string) {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-    });
-    toggleOptions();
-  }
   const toggleOptions = () => {
     setIsOptionsOpen((prev) => !prev);
   };
@@ -81,14 +75,14 @@ const Header = async (params: { locale: string }) => {
   const NavBar = () => (
     <ol className="flex flex-col w-full max-w-maxScreen gap-5 md:gap-[10vmin] p-5">
       {headerOptions.map((option) => (
-        <button
+        <Link
           key={option.key}
           className="text-left hover:text-mainBlue transition-all duration-200 ease-in-out text-4xl md:text-[8vmin] lg:text-[6vmin] text-white"
-          // href={option.href}
-          onClick={() => handleClick(option.href)}
+          href={"#" + option.href}
+          onClick={toggleOptions}
         >
           {option.label}
-        </button>
+        </Link>
       ))}
       <LanguageSwitcher />
     </ol>
